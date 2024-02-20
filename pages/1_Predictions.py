@@ -106,6 +106,8 @@ if st.button('Predict'):
                    
             f'\n Prediction for the future: {obesity_predict}\n\n'
 
+            f'\n Probability of every category:\n\n'
+
             f'\n Insufficient_Weight: {obesity_proba[0][0]*100:.2f}%\n\n'
             f'\n Normal_Weight: {obesity_proba[0][1]*100:.2f}%\n\n'
             f'\n Obesity_Type_I: {obesity_proba[0][2]*100:.2f}%\n\n'
