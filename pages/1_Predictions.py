@@ -60,9 +60,32 @@ def prediction():
     prediction = model.predict(df_input)[0]
     return prediction
 
+def probability():
+    df_input = pd.DataFrame([{
+        'Age': age,
+        'Gender': gender,
+        'Height': height,
+        'Weight': weight,
+        'family_history_with_overweight': family_history_with_overweight,
+        'FAVC': favc,
+        'FCVC': fcvc,
+        'NCP': ncp,
+        'CAEC': caec,
+        'SMOKE': smoke,
+        'CH2O': ch2o,
+        'SCC': scc,
+        'FAF': faf,
+        'TUE': tue,
+        'CALC': calc,
+        'MTRANS': mtrans
+    }])
+    probability = model.predict_proba(df_input)
+    return probability
+
 if st.button('Predict'):
     try:
         obesity_predict = prediction()
+        obesity_proba = probability()
         BMI = weight / (height * height)
         Obes_act = ''
         if BMI < 18.5:
@@ -80,6 +103,24 @@ if st.button('Predict'):
         elif BMI > 40.0:
             Obes_act = 'Obesity_Type_III'
         st.success(f'Actual Obesity Level: {Obes_act}\n\n'
-            f'\nPrediction for the future: {obesity_predict}')
+                   
+            f'\n Prediction for the future: {obesity_predict}\n\n'
+
+            f'\n Insufficient_Weight: {obesity_proba[0][0]*100:.2f}%\n\n'
+            f'\n Normal_Weight: {obesity_proba[0][1]*100:.2f}%\n\n'
+            f'\n Obesity_Type_I: {obesity_proba[0][2]*100:.2f}%\n\n'
+            f'\n Obesity_Type_II: {obesity_proba[0][3]*100:.2f}%\n\n'
+            f'\n Obesity_Type_III: {obesity_proba[0][4]*100:.2f}%\n\n'
+            f'\n Overweight_Level_I: {obesity_proba[0][5]*100:.2f}%\n\n'
+            f'\n Overweight_Level_II: {obesity_proba[0][6]*100:.2f}%\n\n')
+        
+        st.markdown('''
+                    # Predictions
+                    ## Your Current Status:
+
+
+                    ''') # see #*
+
+
     except Exception as error:
         st.error(f"Couldn't predict the input data. The following error occurred: \n\n{error}")
