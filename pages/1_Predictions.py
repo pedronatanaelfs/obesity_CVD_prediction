@@ -23,7 +23,7 @@ weight = st.number_input(label = 'What is your weight in kilograms?', value = 70
 family_history_with_overweight = st.radio('Do you have family history with overweight?',['no', 'yes'])
 favc = st.radio('Do you eat high caloric food frequently?',['no', 'yes'])
 fcvc = st.slider(label = 'How often do you consume vegetables? (0 = Never / 3 = Always)', min_value = 0., max_value = 3.)
-ncp = st.number_input(label = 'How many main meals you have daily?', value = 1.)
+ncp = st.number_input(label = 'How many main meals you have daily?', value = 3)
 caec = st.radio('Do you snack between meals?',['no', 'Sometimes', 'Frequently', 'Always'])
 smoke = st.radio('Do you smoke?',['no', 'yes'])
 ch2o = st.number_input(label = 'How many liters of water do you drink a day?', value = 1.)
