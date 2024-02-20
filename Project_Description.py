@@ -50,4 +50,4 @@ Take control of your health with the Obesity Prediction App — your personalize
 '''
 )
 
-st.success('Please *go to the next pages* to get the predictions')
+st.markdown('<a href="Predictions" target="_self">Make Predictions</a>', unsafe_allow_html=True)
