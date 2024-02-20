@@ -16,7 +16,7 @@ The model is trained on a dataset consisting of 2111 records, collected through 
 - You can access the app right through the link: https://obesityprediction.streamlit.app/
 
 ## Contributions
-Contributions are welcome! If you have ideas for improvements or would like to report issues, please open an [issue](https://github.com/yourusername/obesity_CVD_prediction/issues) or submit a [pull request](https://github.com/yourusername/obesity_CVD_prediction/pulls).
+Contributions are welcome! If you have ideas for improvements or would like to report issues, please open an [issue](https://github.com/pedronatanaelfs/obesity_CVD_prediction/issues) or submit a [pull request](https://github.com/pedronatanaelfs/obesity_CVD_prediction/pulls).
 
 ## License
 This project is licensed under the [MIT License](LICENSE), granting you the freedom to use, modify, and distribute the code.
