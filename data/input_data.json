@@ -1,0 +1,22 @@
+{
+"data": [
+    {
+        "Age": 60,
+        "Gender": "Male",
+        "Height": 1.60,
+        "Weight": 72,
+        "family_history_with_overweight": "yes",
+        "FAVC": "no",
+        "FCVC": 0.3,
+        "NCP": 3,
+        "CAEC": "no",
+        "SMOKE": "no",
+        "CH2O": 2,
+        "SCC": "no",
+        "FAF": 2,
+        "TUE": 1,
+        "CALC": "no",
+        "MTRANS": "Public_Transportation"
+    }
+]
+}
